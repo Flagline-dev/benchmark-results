@@ -8,9 +8,16 @@ its configuration, metrics, and per-item tables.
 |---|---|---|---:|---:|---:|---:|
 | [ModerationBench](moderation-bench/README.md) | [2026-11-19 light](moderation-bench/2026-11-19-light/README.md) | Flagline | 3,443 | 80.7% | 46.0% | 57.9% |
 | [ModerationBench](moderation-bench/README.md) | [2026-11-19 openai](moderation-bench/2026-11-19-openai/README.md) | OpenAI | 3,443 | 79.0% | 50.0% | 57.8% |
+| [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 flagline-light](openai-moderation-api-evaluation/2026-11-19-flagline-light/README.md) | Flagline | 1,680 | 83.3% | 80.9% | 84.3% |
+| [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 openai](openai-moderation-api-evaluation/2026-11-19-openai/README.md) | OpenAI | 1,680 | 75.9% | 88.3% | 80.2% |
 
-See [the ModerationBench comparison](moderation-bench/comparison.md) for the
-side-by-side.
+See the benchmark comparisons for the side-by-side:
+[ModerationBench](moderation-bench/comparison.md) and
+[OpenAI moderation API evaluation](openai-moderation-api-evaluation/comparison.md).
+
+For the OpenAI moderation API evaluation, the accuracy, recall, and F1 columns
+are the aligned any-label union on the 755 fully labeled rows. The per-label
+macro F1 is different and is reported on the benchmark page.
 
 ## Layout
 
@@ -25,9 +32,10 @@ CONTRIBUTING.md                   how to add a result set
     <subset>.md                   per-item tables, when the benchmark has subsets
 ```
 
-The current tree contains one benchmark, ModerationBench. New benchmarks get
-a new top-level directory; new runs of an existing benchmark go inside its
-directory. See [CONTRIBUTING.md](CONTRIBUTING.md) before adding one.
+The current tree contains two benchmarks, ModerationBench and the OpenAI
+moderation API evaluation. New benchmarks get a new top-level directory; new
+runs of an existing benchmark go inside its directory. See
+[CONTRIBUTING.md](CONTRIBUTING.md) before adding one.
 
 ## Content and rights
 
