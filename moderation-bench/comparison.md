@@ -42,6 +42,8 @@ positives (lower precision). Flagline at `light` is more conservative.
 | S8 | rude | 85.9% | 94.6% | +8.8 pp |
 | S9 | threat | 84.4% | 89.8% | +5.5 pp |
 
+Delta is OpenAI minus Flagline in percentage points.
+
 OpenAI is stronger on text-heavy S6 intolerant, S8 rude, and S9 threat.
 Flagline is stronger on S2 sexual, S3 sexual-figurative, and S5 nudity. Both
 are weak on image-dependent categories because neither saw the image. OpenAI's
