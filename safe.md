@@ -12,6 +12,8 @@ Part of the [Flagline ModerationBench results](README.md). See [metrics.md](metr
 
 Unsafe is the positive class. `flag` and `block` both count as Unsafe.
 
+`Predicted` maps Flagline's `allow` to S0 and its top category to a Bluesky code. `Score` is the top category score on flagged rows and `1 - top score` on allowed rows. `Truth` shows the first annotated category when a post has several; [metrics.md](metrics.md) counts every annotated category.
+
 ## Confusion
 
 |  | Actual Safe | Actual Unsafe |
