@@ -4,9 +4,13 @@ Published result sets from Flagline benchmark evaluations. Each benchmark has
 its own directory, and each run inside it is kept as an immutable snapshot with
 its configuration, metrics, and per-item tables.
 
-| Benchmark | Latest run | n | Accuracy | Recall | F1 |
-|---|---|---:|---:|---:|---:|
-| [ModerationBench](moderation-bench/README.md) | [2026-11-19 light](moderation-bench/2026-11-19-light/README.md) | 3,443 | 80.7% | 46.0% | 57.9% |
+| Benchmark | Run | Provider | n | Accuracy | Recall | F1 |
+|---|---|---|---:|---:|---:|---:|
+| [ModerationBench](moderation-bench/README.md) | [2026-11-19 light](moderation-bench/2026-11-19-light/README.md) | Flagline | 3,443 | 80.7% | 46.0% | 57.9% |
+| [ModerationBench](moderation-bench/README.md) | [2026-11-19 openai](moderation-bench/2026-11-19-openai/README.md) | OpenAI | 3,443 | 79.0% | 50.0% | 57.8% |
+
+See [the ModerationBench comparison](moderation-bench/comparison.md) for the
+side-by-side.
 
 ## Layout
 
