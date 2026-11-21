@@ -10,14 +10,15 @@ its configuration, metrics, and per-item tables.
 | [ModerationBench](moderation-bench/README.md) | [2026-11-19 openai](moderation-bench/2026-11-19-openai/README.md) | OpenAI | 3,443 | 3,443 | 79.0% | 50.0% | 57.8% |
 | [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 flagline-light](openai-moderation-api-evaluation/2026-11-19-flagline-light/README.md) | Flagline | 1,680 | 755 | 83.3% | 80.9% | 84.3% |
 | [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 openai](openai-moderation-api-evaluation/2026-11-19-openai/README.md) | OpenAI | 1,680 | 755 | 75.9% | 88.3% | 80.2% |
-| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 flagline-light](message-moderation-eval/2026-11-21-flagline-light/README.md) | Flagline | 7,501 | 4,615 | 94.3% | 87.9% | 93.5% |
-| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 openai](message-moderation-eval/2026-11-21-openai/README.md) | OpenAI | 2,499 | 1,538 | 89.1% | 76.2% | 86.5% |
+| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 v4 flagline-light](message-moderation-eval/2026-11-21-v4-flagline-light/README.md) | Flagline | 8,462 | 5,256 | 82.8% | 66.2% | 78.2% |
+| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 v4 openai](message-moderation-eval/2026-11-21-v4-openai/README.md) | OpenAI | 5,577 | 3,592 | 72.7% | 50.3% | 64.0% |
 
 `Rows` is the number of provider rows in the run. `Metrics n` is the subset
 used for the accuracy, recall, and F1 columns. For the OpenAI moderation API
 evaluation, overall metrics use the 755 fully labeled rows. For Message
-Moderation Eval, strict metrics use positive and negative rows only; borderline
-and proxy rows are reported separately.
+Moderation Eval v4, strict metrics use positive and negative rows only;
+borderline and proxy rows are reported separately. Native MME coverage differs
+by provider, so use its shared-category comparison for the paired view.
 
 See the benchmark comparisons for the side-by-side:
 [ModerationBench](moderation-bench/comparison.md),
