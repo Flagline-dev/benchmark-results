@@ -4,24 +4,25 @@ Published result sets from Flagline benchmark evaluations. Each benchmark has
 its own directory, and each run inside it is kept as an immutable snapshot with
 its configuration, metrics, and per-item tables.
 
-| Benchmark | Run | Provider | n | Accuracy | Recall | F1 |
-|---|---|---|---:|---:|---:|---:|
-| [ModerationBench](moderation-bench/README.md) | [2026-11-19 light](moderation-bench/2026-11-19-light/README.md) | Flagline | 3,443 | 80.7% | 46.0% | 57.9% |
-| [ModerationBench](moderation-bench/README.md) | [2026-11-19 openai](moderation-bench/2026-11-19-openai/README.md) | OpenAI | 3,443 | 79.0% | 50.0% | 57.8% |
-| [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 flagline-light](openai-moderation-api-evaluation/2026-11-19-flagline-light/README.md) | Flagline | 1,680 | 83.3% | 80.9% | 84.3% |
-| [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 openai](openai-moderation-api-evaluation/2026-11-19-openai/README.md) | OpenAI | 1,680 | 75.9% | 88.3% | 80.2% |
-| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 flagline-light](message-moderation-eval/2026-11-21-flagline-light/README.md) | Flagline | 4,615 | 94.3% | 87.9% | 93.5% |
-| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 openai](message-moderation-eval/2026-11-21-openai/README.md) | OpenAI | 1,538 | 89.1% | 76.2% | 86.5% |
+| Benchmark | Run | Provider | Rows | Metrics n | Accuracy | Recall | F1 |
+|---|---|---:|---:|---:|---:|---:|---:|
+| [ModerationBench](moderation-bench/README.md) | [2026-11-19 light](moderation-bench/2026-11-19-light/README.md) | Flagline | 3,443 | 3,443 | 80.7% | 46.0% | 57.9% |
+| [ModerationBench](moderation-bench/README.md) | [2026-11-19 openai](moderation-bench/2026-11-19-openai/README.md) | OpenAI | 3,443 | 3,443 | 79.0% | 50.0% | 57.8% |
+| [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 flagline-light](openai-moderation-api-evaluation/2026-11-19-flagline-light/README.md) | Flagline | 1,680 | 755 | 83.3% | 80.9% | 84.3% |
+| [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 openai](openai-moderation-api-evaluation/2026-11-19-openai/README.md) | OpenAI | 1,680 | 755 | 75.9% | 88.3% | 80.2% |
+| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 flagline-light](message-moderation-eval/2026-11-21-flagline-light/README.md) | Flagline | 7,501 | 4,615 | 94.3% | 87.9% | 93.5% |
+| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 openai](message-moderation-eval/2026-11-21-openai/README.md) | OpenAI | 2,499 | 1,538 | 89.1% | 76.2% | 86.5% |
+
+`Rows` is the number of provider rows in the run. `Metrics n` is the subset
+used for the accuracy, recall, and F1 columns. For the OpenAI moderation API
+evaluation, overall metrics use the 755 fully labeled rows. For Message
+Moderation Eval, strict metrics use positive and negative rows only; borderline
+and proxy rows are reported separately.
 
 See the benchmark comparisons for the side-by-side:
 [ModerationBench](moderation-bench/comparison.md),
 [OpenAI moderation API evaluation](openai-moderation-api-evaluation/comparison.md),
 and [Message Moderation Eval](message-moderation-eval/comparison.md).
-
-For the OpenAI moderation API evaluation, the accuracy, recall, and F1 columns
-are the aligned any-label union on the 755 fully labeled rows. For Message
-Moderation Eval, they are native strict rows (positive plus negative); the
-benchmark page has the per-slice and macro numbers.
 
 ## Layout
 
