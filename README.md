@@ -10,14 +10,18 @@ its configuration, metrics, and per-item tables.
 | [ModerationBench](moderation-bench/README.md) | [2026-11-19 openai](moderation-bench/2026-11-19-openai/README.md) | OpenAI | 3,443 | 79.0% | 50.0% | 57.8% |
 | [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 flagline-light](openai-moderation-api-evaluation/2026-11-19-flagline-light/README.md) | Flagline | 1,680 | 83.3% | 80.9% | 84.3% |
 | [OpenAI moderation API evaluation](openai-moderation-api-evaluation/README.md) | [2026-11-19 openai](openai-moderation-api-evaluation/2026-11-19-openai/README.md) | OpenAI | 1,680 | 75.9% | 88.3% | 80.2% |
+| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 flagline-light](message-moderation-eval/2026-11-21-flagline-light/README.md) | Flagline | 4,615 | 94.3% | 87.9% | 93.5% |
+| [Message Moderation Eval](message-moderation-eval/README.md) | [2026-11-21 openai](message-moderation-eval/2026-11-21-openai/README.md) | OpenAI | 1,538 | 89.1% | 76.2% | 86.5% |
 
 See the benchmark comparisons for the side-by-side:
-[ModerationBench](moderation-bench/comparison.md) and
-[OpenAI moderation API evaluation](openai-moderation-api-evaluation/comparison.md).
+[ModerationBench](moderation-bench/comparison.md),
+[OpenAI moderation API evaluation](openai-moderation-api-evaluation/comparison.md),
+and [Message Moderation Eval](message-moderation-eval/comparison.md).
 
 For the OpenAI moderation API evaluation, the accuracy, recall, and F1 columns
-are the aligned any-label union on the 755 fully labeled rows. The per-label
-macro F1 is different and is reported on the benchmark page.
+are the aligned any-label union on the 755 fully labeled rows. For Message
+Moderation Eval, they are native strict rows (positive plus negative); the
+benchmark page has the per-slice and macro numbers.
 
 ## Layout
 
@@ -32,9 +36,10 @@ CONTRIBUTING.md                   how to add a result set
     <subset>.md                   per-item tables, when the benchmark has subsets
 ```
 
-The current tree contains two benchmarks, ModerationBench and the OpenAI
-moderation API evaluation. New benchmarks get a new top-level directory; new
-runs of an existing benchmark go inside its directory. See
+The current tree contains three benchmarks: ModerationBench, the OpenAI
+moderation API evaluation, and Message Moderation Eval. New benchmarks get a
+new top-level directory; new runs of an existing benchmark go inside its
+directory. See
 [CONTRIBUTING.md](CONTRIBUTING.md) before adding one.
 
 ## Content and rights
